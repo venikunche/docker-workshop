@@ -268,14 +268,14 @@ styles = [
 
 [[package]]
 name = "click"
-version = "8.1.7"
+version = "8.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de", size = 336121, upload-time = "2023-08-17T17:29:11.868Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/3d/fa/656b739db8587d7b5dfa22e22ed02566950fbfbcdc20311993483657a5c0/click-8.3.1.tar.gz", hash = "sha256:12ff4785d337a1bb490bb7e9c2b1ee5da3112e94a8622f26a6c77f5d2fc6842a", size = 295065, upload-time = "2025-11-15T20:45:42.706Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/00/2e/d53fa4befbf2cfa713304affc7ca780ce4fc1fd8710527771b58311a3229/click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28", size = 97941, upload-time = "2023-08-17T17:29:10.08Z" },
+    { url = "https://files.pythonhosted.org/packages/98/78/01c019cdb5d6498122777c1a43056ebb3ebfeef2076d9d026bfe15583b2b/click-8.3.1-py3-none-any.whl", hash = "sha256:981153a64e25f12d547d3426c367a4857371575ee7ad18df2a6183ab0545b2a6", size = 108274, upload-time = "2025-11-15T20:45:41.139Z" },
 ]
 
 [[package]]
@@ -1118,7 +1118,7 @@ wheels = [
 
 [[package]]
 name = "pgcli"
-version = "4.4.0"
+version = "4.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cli-helpers", extra = ["styles"] },
@@ -1133,9 +1133,9 @@ dependencies = [
     { name = "sqlparse" },
     { name = "tzlocal" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/98/9d/193acc7d3236e5941c02044787bd33afb668d33f72375d1ba3b4f5e92128/pgcli-4.4.0.tar.gz", hash = "sha256:bd5f8d68af28fd69551a3cb48a2849cad5f6854aa48022e9d98c6236d109eeae", size = 663452, upload-time = "2025-12-24T23:39:49.863Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ab/9a/c86de44b7a663f0a15cb835d317f22f2ef8438154f6b646ffe32baa3799d/pgcli-4.3.0.tar.gz", hash = "sha256:765ae1550c5508a481f19f16a99716c253fe91afb255797add2d635da20b6aef", size = 147254, upload-time = "2025-03-22T22:04:51.903Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b7/1c/9f15ec4b3c6e6889f79fde43213e563ee36b7840db4d2994da486ed5459d/pgcli-4.4.0-py3-none-any.whl", hash = "sha256:5eac36b0e5afeff919baa3088e5ef49feef20815d18250f99f2cdf29851b64c4", size = 85473, upload-time = "2025-12-24T23:39:48.296Z" },
+    { url = "https://files.pythonhosted.org/packages/78/b4/1229fbe208450998c1e66f5dd2b7e59277602911b5cd2e502dcbffd4c8df/pgcli-4.3.0-py3-none-any.whl", hash = "sha256:1b06710c837407465ad200b636a604b5e1a6ad3e05eabfd8306e13de247765b9", size = 85466, upload-time = "2025-03-22T22:04:49.775Z" },
 ]
 
 [[package]]
@@ -1157,6 +1157,7 @@ name = "pipeline"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "click" },
     { name = "pandas" },
     { name = "psycopg2-binary" },
     { name = "pyarrow" },
@@ -1172,17 +1173,18 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "pandas", specifier = ">=3.0.0" },
+    { name = "click", specifier = ">=8.3.1" },
+    { name = "pandas", specifier = ">=2.3.3" },
     { name = "psycopg2-binary", specifier = ">=2.9.11" },
-    { name = "pyarrow", specifier = ">=23.0.0" },
-    { name = "sqlalchemy", specifier = ">=2.0.46" },
+    { name = "pyarrow", specifier = ">=22.0.0" },
+    { name = "sqlalchemy", specifier = ">=2.0.44" },
     { name = "tqdm", specifier = ">=4.67.1" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
     { name = "jupyter", specifier = ">=1.1.1" },
-    { name = "pgcli", specifier = ">=4.4.0" },
+    { name = "pgcli", specifier = ">=4.3.0" },
 ]
 
 [[package]]
